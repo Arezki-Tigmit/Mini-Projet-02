@@ -1,0 +1,84 @@
+<div fxLayout="column" fxLayoutAlign="space-around center">
+    <div><h1>Modifier le Produit No: {{data.id}}</h1></div>
+
+    <div>
+        <form [formGroup]="produitFormGroup">
+            <div fxLayout="column" fxLayoutAlign="space-around center" >
+    
+                <div>
+                      <mat-form-field appearance="legacy">
+                        <mat-label>Nom:</mat-label>
+                        <input matInput placeholder="Nom"  formControlName="nom">
+                        <mat-error *ngIf="produitFormGroup.get('nom')?.errors && 
+                        produitFormGroup.controls['nom']?.errors!['pattern']">
+                         format invalid
+                        </mat-error>
+                        <mat-error *ngIf="produitFormGroup.get('nom')?.errors && 
+                        produitFormGroup.controls['nom']?.errors!['required']">
+                          required field
+                        </mat-error>
+                      </mat-form-field></div>
+    
+                      <div>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Unite de mesure:</mat-label>
+                          <select matNativeControl formControlName="unite" name="unite">
+                            <option value="" selected></option>
+                            <option *ngFor="let unite of valueUnite" [value]="unite.value">
+                              {{unite.viewValue}}
+                            </option>
+                          </select>
+                        </mat-form-field></div>
+    
+                        <div>
+                            <mat-form-field appearance="legacy">
+                              <mat-label>Prix:</mat-label>
+                              <input matInput placeholder="Prix" formControlName="prix">
+                            </mat-form-field></div>
+    
+                                  
+                        <div>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Date de Disponibilité: </mat-label>
+                                    <input matInput [matDatepicker]="picker">
+                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                     <mat-datepicker #picker></mat-datepicker>
+                                </mat-form-field></div>
+    
+                                <div>
+                                    <mat-slide-toggle color="#picker" formControlName="statut">Disponibilité </mat-slide-toggle></div>
+                                    
+                                <div>
+                                    <mat-form-field  appearance="fill">
+                                      <mat-label>Description: </mat-label>
+                                        <textarea matInput
+                                                  cdkTextareaAutosize
+                                                  #autosize="cdkTextareaAutosize"
+                                                  cdkAutosizeMinRows="1"
+                                                  cdkAutosizeMaxRows="5"
+                                                  formControlName="description"></textarea>
+                                   </mat-form-field>
+                                </div>
+    
+    
+    
+                                    <div class="example-button-row">
+                                      <div class="example-flex-container">
+                                         <div class="example-button-container">
+                                            <button [disabled]="produitFormGroup.invalid" mat-mini-fab color="primary" (click)="modifierProduit()">
+                                              <mat-icon >menu</mat-icon>
+                                             </button>
+                                          </div>
+                              
+                                        </div>
+                                     </div>
+    
+                                
+    
+    
+                      
+            </div>
+        </form>
+    </div>
+
+</div>
