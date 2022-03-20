@@ -1,0 +1,52 @@
+{
+  "produit": [
+    {
+      "id": 1,
+      "nom": "ahmed",
+      "unite": "L",
+      "prix": "20",
+      "dateDispo": null,
+      "statut": true,
+      "description": "produit ahmed"
+    },
+    {
+      "id": 2,
+      "nom": "produit 2",
+      "unite": "litre",
+      "prix": 13,
+      "image": "",
+      "statut": "inactif",
+      "dateDispo": "15/03/2022",
+      "description": "C'est le produit 04"
+    },
+    {
+      "id": 3,
+      "nom": "produit 3",
+      "unite": "kg",
+      "prix": 16,
+      "image": "",
+      "statut": "actif",
+      "dateDispo": "15/03/2022",
+      "description": "C'est le produit 04"
+    },
+    {
+      "id": 4,
+      "nom": "produit 4",
+      "unite": "metre",
+      "prix": 40,
+      "image": "",
+      "statut": "inactif",
+      "dateDispo": "15/03/2022",
+      "description": "C'est le produit 04"
+    },
+    {
+      "id": 8,
+      "nom": "produit 08",
+      "unite": "cm",
+      "prix": "45",
+      "dateDispo": "2022-03-17T23:00:00.000Z",
+      "statut": true,
+      "description": "c'est le produit 08"
+    }
+  ]
+}

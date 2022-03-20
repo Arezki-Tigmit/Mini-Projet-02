@@ -1,0 +1,10 @@
+<div fxLayout="column" fxLayoutAlign="space-around center">
+    <div><h1>Infos Du Produit  No:{{data.id}}</h1></div>
+    <div><h2>Nom du produit: {{data.nom}}</h2></div>
+
+    <div><h3>Unité de mesure : {{data.unite}}</h3></div>
+    <div><h3>Prix: {{data.prix | currency: 'Eur'}}</h3></div>
+    <div><h3>Date de Disponibilité: {{data.dateDispo}}</h3></div>
+    <div><h3>Status: {{data.statut}}</h3></div>
+    <div><p>Description: {{data.description}}</p></div>
+</div>
